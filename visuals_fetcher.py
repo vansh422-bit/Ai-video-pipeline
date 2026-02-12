@@ -1,6 +1,6 @@
 import requests
 
-PEXELS_API_KEY = "Rx4f1gQClKMgRWMQqmiDwZ956tbmMZOD7WedYM53iIkQygivYVCwjEd1"
+PEXELS_API_KEY = "ENTER_YOUR_SECRET_KEY"
 
 def fetch_images(topic, count=5):
     url = f"https://api.pexels.com/v1/search?query={topic}&per_page={count}"
@@ -9,3 +9,4 @@ def fetch_images(topic, count=5):
 
     image_urls = [photo["src"]["large"] for photo in response["photos"]]
     return image_urls
+
